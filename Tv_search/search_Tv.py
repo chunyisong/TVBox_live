@@ -165,6 +165,7 @@ if __name__ == '__main__':
     for i in range(0, len(sys.argv)):
         print('参数 %s 为：%s' % (i, sys.argv[i]))
     # speed = input('请直接回车确定或输入阈值:  ')
+    speed = ''
     if len(sys.argv) > 1:
         speed = sys.argv[1]
     print('说明：\n'

@@ -162,15 +162,20 @@ def re_dup(filepath):
 
 
 if __name__ == '__main__':
+    for i in range(0, len(sys.argv)):
+        print('参数 %s 为：%s' % (i, sys.argv[i]))
+    # speed = input('请直接回车确定或输入阈值:  ')
+    if len(sys.argv) > 0:
+        speed = sys.argv[1]
     print('说明：\n'
           '速度阈值默认为0.8\n'
           '阈值越大，直播流速度越快，检索出的直播流数量越少\n'
           '建议日常阈值最小0.3，能够满足日常播放流不卡顿\n')
-    speed = input('请直接回车确定或输入阈值:  ')
     if speed == '':
         speed = 1
     else:
         speed = float(speed)
+    print(f'当前阈值:{speed}MB/s')
     # 获取当前工作目录
     current_directory = os.getcwd()
     # 构造上级目录的路径
